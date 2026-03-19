@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Landing Page Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body
+    class="bg-gradient-to-br from-gray-100 to-gray-200 min-h-screen flex items-center justify-center"
+  >
+    <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-3xl">
+      <h1 class="text-3xl font-bold mb-2 text-center">
+        🚀 AI Landing Page Generator
+      </h1>
+      <p class="text-center text-gray-500 mb-6">
+        Generate high-converting landing pages instantly with AI
+      </p>
+
+      <label class="block mb-1 font-semibold">Choose Style / Tone:</label>
+      <select id="styleTone" class="w-full p-2 border rounded mb-3">
+        <option value="startup">Startup / Modern</option>
+        <option value="luxury">Luxury / Premium</option>
+        <option value="saas">SaaS / Professional</option>
+      </select>
+
+      <label>
+        <input type="checkbox" id="includeTestimonials" checked /> Testimonials
+      </label>
+      <label>
+        <input type="checkbox" id="includePricing" checked /> Pricing
+      </label>
+
+      <input
+        id="productName"
+        type="text"
+        placeholder="Product Name"
+        class="w-full p-2 border rounded mb-3"
+      />
+
+      <textarea
+        id="description"
+        placeholder="Describe your product..."
+        class="w-full p-2 border rounded mb-3"
+      ></textarea>
+
+      <button
+        onclick="generateContent()"
+        class="w-full bg-blue-600 text-white p-3 rounded-lg hover:bg-blue-700 transition"
+      >
+        Generate Landing Page
+      </button>
+
+      <div id="output" class="mt-4 text-sm text-gray-700"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
